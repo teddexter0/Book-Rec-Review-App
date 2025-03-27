@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+
+<h2>Book Collection</h2>
+<p class="about">
+  I like reading a ton of non-fiction. At times, I forget the lessons they
+  carry, I'm sure you do too. So I made this as a reminder of what I learned and
+  my recommendation ratings. Enjoy your reading!
+</p>
+<main id="short-sum-container">
+  <ul>
+    <!-- This is essentially the default book card -->
+    <% books.forEach(book => { %>
+    <li id="short-sum-card">
+      <!-- This is how the individual book has an endpoint -->
+      <h2><a href="/book/<%= book.id %>"> <%= book.title %> </a></h2>
+
+      <p>Author: <%= book.author %></p>
+
+      <!-- Need to introduce the stars, corresponding to rating or like out of 5 stars or sth -->
+      <p>Rating: <%= book.rating %>/10</p>
+      <p>
+        <% if (book.rating > 8) { %> ⭐⭐⭐⭐⭐ <% } else if (book.rating > 6) {
+        %> ⭐⭐⭐⭐ <% } else if (book.rating > 4) { %> ⭐⭐⭐ <% } else if
+        (book.rating > 2) { %> ⭐⭐ <% } else if (book.rating > 0) { %> ⭐ <% }
+        %>
+      </p>
+
+      <!-- Need to introduce the character limit or sth for the summaries -->
+      <p>
+        <%= book.short_summary.length > 120 ?
+        book.short_summary.substring(0,120) + "..." : book.short_summary %>
+      </p>
+    </li>
+    <% }) %>
+  </ul>
+</main>
+
+<%- include('partials/footer') %>

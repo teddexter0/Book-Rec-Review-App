@@ -1,0 +1,13 @@
+# Node.js dependencies
+/node_modules
+
+# Environment variables (Secrets)
+.env  
+# The root .env file
+
+# Webpack output (bundled files shouldn't be tracked)
+Front-end/public/
+
+# macOS & Windows system junk files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+<!-- Header includes <head> and opens <body> -->
+
+<main id="long-sum-card">
+  <h2><%= book.title %></h2>
+  <p>Author: <%= book.author %></p>
+
+  <p>Rating: <%= book.rating %>/10</p>
+
+  <p>
+    <% if (book.rating > 9) { %> ⭐⭐⭐⭐⭐ <% } else if (book.rating > 7) { %>
+    ⭐⭐⭐⭐ <% } else if (book.rating > 5) { %> ⭐⭐⭐ <% } else if
+    (book.rating > 3) { %> ⭐⭐ <% } else if (book.rating > 1) { %> ⭐ <% } %>
+  </p>
+
+  <p class="long-sum"><%= book.formattedSummary %></p>
+</main>
+
+<%- include('partials/footer') %>
+
+<!-- Footer closes </body> and </html> -->

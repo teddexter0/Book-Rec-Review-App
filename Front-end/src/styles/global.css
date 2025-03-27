@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/Open_Sans/OpenSansSemiCondensed-SemiBoldItalic.woff2") format("woff2"),
+         url("../fonts/Open_Sans/OpenSansSemiCondensed-SemiBoldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "Oswald";
+    src: url("../fonts/Oswald/Oswald-Regular.woff2") format("woff2"),
+         url("../fonts/Oswald/Oswald-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Roboto Condensed";
+    src: url("../fonts/Roboto_Condensed/RobotoCondensed-Black.woff2") format("woff2"),
+         url("../fonts/Roboto_Condensed/RobotoCondensed-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+  }
+
+html, body {
+    height: 100vh; /* Ensures full height */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: black;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+} 
+
+
+#short-sum-container {
+  border: solid 2px black;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Dynamic grid */
+  gap: 20px; /* Spacing */
+  padding: 10px;
+}
+
+#short-sum-container ul {
+  display: contents; /* Fix ul wrapping */
+}
+
+#short-sum-card {
+  list-style: none;
+  border: solid 2px black;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom;
+
+  &:hover {
+    transform: perspective(500px) rotateY(15deg);
+    background-color: turquoise;
+    z-index: 10;
+    border-radius: 15px;
+  }
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+.about {
+  font-size: x-large;
+}
+
+/* This about looks good on small screen, but I want it better on large screen */
+@media (max-width: 768px) {
+  .about {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    margin: auto;
+    text-align: center;
+    padding: 0 30% 5px 30%;
+  }
+}
