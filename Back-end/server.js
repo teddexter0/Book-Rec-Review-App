@@ -3,10 +3,14 @@ import express from "express";
 import { fileURLToPath } from "url";
 import pool from "./db.js"; // Keep your DB import
 import dotenv from "dotenv";
-dotenv.config(); // This loads the environment variables from the .env file
 
+// Resolve the correct path for .env
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Adjust path to load .env from the root directory
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
+console.log("✅ ENV Loaded:", process.env.DB_USER, process.env.DB_PASS);
 
 const app = express();
 
@@ -44,6 +48,6 @@ app.get("/book/:id", async (req, res) => {
   }
 });
 
-const port = process.env.DB_PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
