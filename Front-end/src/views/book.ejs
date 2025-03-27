@@ -8,12 +8,12 @@
   <p>Rating: <%= book.rating %>/10</p>
 
   <p>
-    <% if (book.rating > 9) { %> ⭐⭐⭐⭐⭐ <% } else if (book.rating > 7) { %>
-    ⭐⭐⭐⭐ <% } else if (book.rating > 5) { %> ⭐⭐⭐ <% } else if
-    (book.rating > 3) { %> ⭐⭐ <% } else if (book.rating > 1) { %> ⭐ <% } %>
+    <% if (book.rating > 8) { %> ⭐⭐⭐⭐⭐ <% } else if (book.rating > 6) { %>
+    ⭐⭐⭐⭐ <% } else if (book.rating > 4) { %> ⭐⭐⭐ <% } else if
+    (book.rating > 2) { %> ⭐⭐ <% } else if (book.rating > 0) { %> ⭐ <% } %>
   </p>
 
-  <p class="long-sum"><%= book.formattedSummary %></p>
+  <p class="long-sum"><%= book.long_summary %></p>
 </main>
 
 <%- include('partials/footer') %>

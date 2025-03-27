@@ -30,20 +30,29 @@ app.get(["/", "/index", "/home"], async (req, res) => {
   }
 });
 
-// Show one book's detailed view
-
+// Individual focused book
 app.get("/book/:id", async (req, res) => {
   try {
     const { id } = req.params;
 
-    const result = await pool.query("SELECT * FROM books WHERE id = $1", [id]);
+    const result = await pool.query(
+      "SELECT id, title, author, rating, long_summary FROM books WHERE id = $1",
+      [id]
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(404).send("Book not found");
+    }
+
     const book = result.rows[0];
 
-    if (!book) return res.status(404).send("Book not found");
+    if (!book.long_summary) {
+      book.long_summary = "No summary available.";
+    }
 
     res.render("book", { book });
   } catch (err) {
-    console.error(err.message);
+    console.error("❌ Server Error:", err.message);
     res.status(500).send("Server Error");
   }
 });
