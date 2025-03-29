@@ -10,7 +10,6 @@ const __dirname = path.dirname(__filename);
 
 // Adjust path to load .env from the root directory
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
-console.log("✅ ENV Loaded:", process.env.DB_USER, process.env.DB_PASS);
 
 const app = express();
 

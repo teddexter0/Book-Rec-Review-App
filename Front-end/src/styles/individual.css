@@ -1,7 +1,35 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/OpenSansSemiCondensed-SemiBoldItalic.woff2") format("woff2"),
+       url("../fonts/Open_Sans/OpenSansSemiCondensed-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald/Oswald-Regular.woff2") format("woff2"),
+       url("../fonts/Oswald/Oswald-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../fonts/Roboto_Condensed/RobotoCondensed-Black.woff2") format("woff2"),
+       url("../fonts/Roboto_Condensed/RobotoCondensed-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .long-sum {
-    margin: auto;
+    margin: 5%;
     border-left: solid 3px white;
     border-right: solid 3px white;
-    padding: 20px;
-    color: white;
+    padding: 30px;
+    color: white; 
+    font-family: "Oswald";
+    font-weight: normal;
+    font-style: normal;   
+    letter-spacing: 2px;
   }
