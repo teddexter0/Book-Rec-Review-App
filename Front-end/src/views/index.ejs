@@ -13,6 +13,16 @@
     <!-- This is essentially the default book card -->
     <% books.forEach(book => { %>
     <li id="short-sum-card">
+      <!-- ✅ Book Cover only if ISBN exists -->
+      <% if (book.isbn) { %>
+      <img
+        class="book-cover"
+        src="https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-M.jpg"
+        alt="Cover for <%= book.title %>"
+        loading="lazy"
+      />
+      <% } %>
+
       <!-- This is how the individual book has an endpoint -->
       <h2 class="book-title">
         <a href="/book/<%= book.id %>"> <%= book.title %> </a>

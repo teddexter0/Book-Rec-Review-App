@@ -139,3 +139,13 @@ ul {
 .init-title::after {
   bottom: 4px; /* Second line lower */
 }
+
+/* Book cover */
+
+.book-cover {
+  display: block;
+  margin: 0.5rem auto;
+  max-width: 135px;
+  border-radius: 5px;
+  object-fit: contain;
+}

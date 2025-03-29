@@ -21,7 +21,7 @@ app.use(express.static(path.resolve(__dirname, "../Front-end/public")));
 app.get(["/", "/index", "/home"], async (req, res) => {
   try {
     const result = await pool.query(
-      "SELECT id, title, author, rating, short_summary FROM books"
+      "SELECT id, title, author, rating, short_summary, isbn FROM books"
     );
     res.render("index", { books: result.rows });
   } catch (err) {
