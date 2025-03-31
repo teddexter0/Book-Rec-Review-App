@@ -1,3 +1,8 @@
+import pg from "pg";
+import dotenv from "dotenv";
+
+dotenv.config();
+
 const pool = new pg.Pool(
   process.env.DATABASE_URL
     ? {
@@ -12,3 +17,5 @@ const pool = new pg.Pool(
         port: process.env.DB_PORT,
       }
 );
+
+export default pool;
