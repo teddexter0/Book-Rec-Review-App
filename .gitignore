@@ -11,3 +11,5 @@ Front-end/public/
 # macOS & Windows system junk files
 .DS_Store
 Thumbs.db
+
+db--PC.js
