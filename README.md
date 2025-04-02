@@ -3,7 +3,6 @@
 
 A personal book collection web application that helps you remember and share the key insights from your non-fiction reads. This application displays book details including titles, authors, ratings, and summaries, along with book covers fetched from the Open Library API.
 
-![Ink With Insights Logo](Front-end/public/images/cover.png)
 
 ## Features
 
