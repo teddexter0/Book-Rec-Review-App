@@ -1,4 +1,7 @@
 # Book-Rec-Review-App
+
+# Screenshot
+![Ink With Insights Screenshot](Front-end/src/images/ink-with-insights-screenshot.jpeg)
 # Ink With Insights - Book Collection App
 
 A personal book collection web application that helps you remember and share the key insights from your non-fiction reads. This application displays book details including titles, authors, ratings, and summaries, along with book covers fetched from the Open Library API.

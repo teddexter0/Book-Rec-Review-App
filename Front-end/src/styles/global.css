@@ -149,3 +149,15 @@ ul {
   border-radius: 5px;
   object-fit: contain;
 }
+
+#ai-rec-route {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50%;
+  padding: 10px;
+  border-radius: 15px;
+  letter-spacing: 1px;
+  background-color:deepskyblue;
+}

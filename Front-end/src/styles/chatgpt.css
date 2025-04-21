@@ -1,0 +1,25 @@
+.genre-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .genre-card {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+  }
+
+  .genre-card:hover {
+    transform: scale(1.05);
+    background-color: skyblue;
+  }

@@ -3,6 +3,7 @@ import express from "express";
 import { fileURLToPath } from "url";
 import pool from "./db.js"; // Keep your DB import
 import dotenv from "dotenv";
+import router from "./chatgpt.js"; // Import the AI routes
 
 // Resolve the correct path for .env
 const __filename = fileURLToPath(import.meta.url);
@@ -16,6 +17,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "../Front-end/src/views"));
 app.use(express.static(path.resolve(__dirname, "../Front-end/public")));
+app.use("/ai", router);
 
 // Show all books
 app.get(["/", "/index", "/home"], async (req, res) => {

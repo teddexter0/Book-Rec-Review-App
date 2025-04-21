@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <h1>Choose a Book Genre</h1>
+  <div class="genre-container" style="color: white">
+    <% genres.forEach(genre => { %>
+    <a href="/ai/book/<%= genre %>" class="genre-card">
+      <p><%= genre %></p>
+    </a>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
