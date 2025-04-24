@@ -1,54 +1,64 @@
 import express from "express";
-import OpenAI from "openai"; // Using new v4 SDK
-import dotenv from "dotenv";
-
-dotenv.config();
-
-// Set up OpenAI API client
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+import fetch from "node-fetch"; // or axios if you prefer that
 
 const router = express.Router();
+const HF_API_KEY = process.env.HUGGINGFACE_API_KEY;
 
-// 🔹 STEP 1: Get 10 book genres
+// Helper function for Hugging Face Inference API
+async function queryHuggingFace(model, inputs) {
+  const response = await fetch(
+    `https://api-inference.huggingface.co/models/${model}`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${HF_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ inputs }),
+    }
+  );
+
+  const result = await response.json();
+  if (!response.ok) {
+    throw new Error(
+      `Hugging Face error: ${response.status} - ${response.statusText}`
+    );
+  }
+  return result;
+}
+
+// Route to get genres
 router.get("/", async (req, res) => {
   try {
-    const genrePrompt = `
+    const prompt = `
       Suggest 10 random popular book genres.
       Return the result ONLY in this JSON format:
       ["Self-Help", "Christian", "Non-Fiction", "Fantasy", "Science Fiction", "Mystery", "Romance", "Horror", "Thriller", "Biography"]
     `.trim();
 
-    const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
-      messages: [{ role: "user", content: genrePrompt }],
-      temperature: 0.7,
-    });
+    const output = await queryHuggingFace(
+      "distilgpt2", // Use smaller model instead of the large one
+      prompt
+    );
 
-    let genres = [];
-    try {
-      genres = JSON.parse(response.choices[0].message.content.trim());
-    } catch (parseError) {
-      console.error("❌ Genre parse error:", parseError);
-    }
+    const raw = output?.[0]?.generated_text || "";
+    const match = raw.match(/\[.*?\]/s);
+    const genres = match ? JSON.parse(match[0]) : [];
 
     res.render("ai", { genres });
   } catch (error) {
-    const err = error?.response?.data?.error;
-    console.error(
-      "❌ Genre API error:",
-      err?.message || error.message || error
-    );
+    console.error("❌ Genre API error:", error.message);
     res.render("ai", { genres: [] });
   }
 });
 
-// 🔹 STEP 2: Get 5 books from selected genre
-router.get("/books/:genre", async (req, res) => {
+// Route to get books by genre
+
+router.get("/book/:genre", async (req, res) => {
+  const genre = req.params.genre;
+
   try {
-    const genre = req.params.genre;
-    const bookPrompt = `
+    const prompt = `
       Suggest 5 books from the genre "${genre}". 
       Include:
       - Title
@@ -57,7 +67,7 @@ router.get("/books/:genre", async (req, res) => {
       - A short summary (max 120 words)
       - An approximate rating out of 10
 
-      Return the result ONLY in this JSON format:
+      Return ONLY in this JSON format:
       [
         {
           "title": "Book Title",
@@ -69,24 +79,20 @@ router.get("/books/:genre", async (req, res) => {
       ]
     `.trim();
 
-    const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
-      messages: [{ role: "user", content: bookPrompt }],
-      temperature: 0.8,
-    });
+    // Get book recommendations from the AI
+    const output = await queryHuggingFace("distilgpt2", prompt); // Ensure this method works with your Hugging Face API
+    const raw = output?.[0]?.generated_text || "";
+    const match = raw.match(/\[.*?\]/s);
+    const books = match ? JSON.parse(match[0]) : [];
 
-    let books = [];
-    try {
-      books = JSON.parse(response.choices[0].message.content.trim());
-    } catch (parseError) {
-      console.error("❌ Book parse error:", parseError);
-    }
+    // Shuffle the books to randomize the order
+    books.sort(() => Math.random() - 0.5);
 
-    res.render("book", { books, genre });
+    // Send back the books as JSON
+    res.json({ books, genre });
   } catch (error) {
-    const err = error?.response?.data?.error;
-    console.error("❌ Book API error:", err?.message || error.message || error);
-    res.render("book", { books: [], genre });
+    console.error("❌ Book API error:", error);
+    res.json({ books: [], genre });
   }
 });
 

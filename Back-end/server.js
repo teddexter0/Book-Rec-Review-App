@@ -17,7 +17,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "../Front-end/src/views"));
 app.use(express.static(path.resolve(__dirname, "../Front-end/public")));
-app.use("/ai", router);
+app.use("/ai", router); // Use AI routes from chatgpt.js
 
 // Show all books
 app.get(["/", "/index", "/home"], async (req, res) => {

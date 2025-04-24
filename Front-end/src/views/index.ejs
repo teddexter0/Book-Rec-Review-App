@@ -10,7 +10,7 @@
 
   <!-- Hits the ejs route for GPT -->
 
-  <div><button> <a href="/ai" id="ai-rec-route">Personalized AI recommendations?</a></button></div>
+  <div id="ai-rec-route"><button> <a href="/ai">Personalized AI recommendations?</a></button></div>
 </p>
 
 <main id="short-sum-container">
@@ -29,7 +29,7 @@
       <% } %>
 
       <!-- This is how the individual book has an endpoint -->
-      <h2 class="book-title">
+      <h2 class="book-title" style="color: navy;">
         <a href="/book/<%= book.id %>"> <%= book.title %> </a>
       </h2>
 

@@ -1,14 +1,69 @@
 <%- include('partials/header') %>
-
 <div class="container">
   <h1>Choose a Book Genre</h1>
   <div class="genre-container" style="color: white">
     <% genres.forEach(genre => { %>
-    <a href="/ai/book/<%= genre %>" class="genre-card">
+    <button class="genre-card" data-genre="<%= genre %>">
       <p><%= genre %></p>
-    </a>
+    </button>
     <% }) %>
   </div>
+
+  <!-- This is where the books will be displayed -->
+  <div id="book-container"></div>
 </div>
+
+<script>
+  document.querySelectorAll(".genre-card").forEach((button) => {
+    button.addEventListener("click", async (event) => {
+      const genre = event.currentTarget.dataset.genre; // Ensure you're using currentTarget to get the correct genre
+
+      // Check if genre is valid
+      if (!genre) {
+        console.error("Genre is undefined!");
+        return;
+      }
+
+      try {
+        // Send an AJAX request to get the books for the selected genre
+        const response = await fetch(`/ai/book/${genre}`);
+        const data = await response.json(); // Expecting JSON response with books data
+
+        // Handle case where no books are returned
+        if (!data.books || data.books.length === 0) {
+          document.querySelector(
+            "#book-container"
+          ).innerHTML = `<p>No books found for the "${genre}" genre.</p>`;
+          return;
+        }
+
+        const { books, genre: selectedGenre } = data;
+
+        const booksContainer = document.querySelector("#book-container");
+
+        // Clear previous books (avoid appending old results)
+        booksContainer.innerHTML = `<h2>Books in ${selectedGenre} Genre:</h2>`;
+
+        // Loop through each book and display it
+        books.forEach((book) => {
+          const bookDiv = document.createElement("div");
+          bookDiv.classList.add("genre-card");
+          bookDiv.innerHTML = `
+            <h3 class="book-title">${book.title}</h3>
+            <p class="book-author">Author: ${book.author}</p>
+            <p class="book-rating">Rating: ${book.rating}/10</p>
+            <p class="book-summary">${book.short_summary}</p>
+          `;
+          booksContainer.appendChild(bookDiv);
+        });
+      } catch (error) {
+        console.error("Error fetching books:", error);
+        document.querySelector(
+          "#book-container"
+        ).innerHTML = `<p>Sorry, there was an error fetching books for this genre.</p>`;
+      }
+    });
+  });
+</script>
 
 <%- include('partials/footer') %>

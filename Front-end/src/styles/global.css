@@ -27,6 +27,14 @@
   font-weight: 900; 
 }
 
+.book-title, .book-author, .book-summary, .book-rating{
+  color: black;
+}
+
+.book-container{
+  display: flex;
+  justify-content: center;
+}
 
 .short-sum{
   font-family: "Open Sans";
@@ -149,15 +157,26 @@ ul {
   border-radius: 5px;
   object-fit: contain;
 }
-
-#ai-rec-route {
-  text-decoration: none;
+#ai-rec-route{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 50%;
-  padding: 10px;
   border-radius: 15px;
-  letter-spacing: 1px;
-  background-color:deepskyblue;
+  justify-content: center;
+  align-items: center; 
+  padding-top: 10px;
+}
+#ai-rec-route button{
+border: none;
+background-color:deepskyblue;
+border-radius: 15px;
+padding: 15px;
+margin-top: 5px;
+}
+#ai-rec-route a{ 
+  text-decoration: none;
+  letter-spacing: 1px; 
+  font-size: large;
+  color: yellow; 
+  &:hover{
+    color: black;
+  }
 }
