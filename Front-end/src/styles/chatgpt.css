@@ -68,7 +68,7 @@
 }
 
 .book-author {
-  color: #666;
+  color: rgba(0, 0, 0, .5);
   font-style: italic;
   margin-bottom: 10px;
 }
