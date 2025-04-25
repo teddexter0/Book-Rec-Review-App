@@ -1,12 +1,17 @@
 <%- include('partials/header') %>
 <div class="container">
-  <h1>Choose a Book Genre</h1>
-  <div class="genre-container" style="color: white">
+  <h1>AI Book Recommendations</h1>
+  <div class="genre-container">
     <% genres.forEach(genre => { %>
     <button class="genre-card" data-genre="<%= genre %>">
       <p><%= genre %></p>
     </button>
     <% }) %>
+  </div>
+
+  <!-- Loading indicator -->
+  <div id="loading" style="display: none; text-align: center; margin: 20px 0">
+    <p>Loading recommendations...</p>
   </div>
 
   <!-- This is where the books will be displayed -->
@@ -16,7 +21,7 @@
 <script>
   document.querySelectorAll(".genre-card").forEach((button) => {
     button.addEventListener("click", async (event) => {
-      const genre = event.currentTarget.dataset.genre; // Ensure you're using currentTarget to get the correct genre
+      const genre = event.currentTarget.dataset.genre;
 
       // Check if genre is valid
       if (!genre) {
@@ -24,39 +29,63 @@
         return;
       }
 
+      // Show loading indicator
+      const loadingElement = document.getElementById("loading");
+      loadingElement.style.display = "block";
+
+      // Clear previous books
+      const booksContainer = document.getElementById("book-container");
+      booksContainer.innerHTML = "";
+
       try {
         // Send an AJAX request to get the books for the selected genre
         const response = await fetch(`/ai/book/${genre}`);
-        const data = await response.json(); // Expecting JSON response with books data
+        const data = await response.json();
+
+        // Hide loading indicator
+        loadingElement.style.display = "none";
 
         // Handle case where no books are returned
         if (!data.books || data.books.length === 0) {
-          document.querySelector(
-            "#book-container"
-          ).innerHTML = `<p>No books found for the "${genre}" genre.</p>`;
+          booksContainer.innerHTML = `<p>No books found for the "${genre}" genre.</p>`;
           return;
         }
 
         const { books, genre: selectedGenre } = data;
 
-        const booksContainer = document.querySelector("#book-container");
+        // Add heading
+        booksContainer.innerHTML = `<h2>Top Recommendations for ${selectedGenre}:</h2>`;
 
-        // Clear previous books (avoid appending old results)
-        booksContainer.innerHTML = `<h2>Books in ${selectedGenre} Genre:</h2>`;
+        // Create a container for the books
+        const booksList = document.createElement("div");
+        booksList.classList.add("book-container");
+        booksContainer.appendChild(booksList);
 
         // Loop through each book and display it
         books.forEach((book) => {
-          const bookDiv = document.createElement("div");
-          bookDiv.classList.add("genre-card");
-          bookDiv.innerHTML = `
-            <h3 class="book-title">${book.title}</h3>
-            <p class="book-author">Author: ${book.author}</p>
-            <p class="book-rating">Rating: ${book.rating}/10</p>
-            <p class="book-summary">${book.short_summary}</p>
+          const bookCard = document.createElement("div");
+          bookCard.classList.add("book-card");
+
+          // Format the book rating to have one decimal place
+          const formattedRating = parseFloat(book.rating).toFixed(1);
+
+          bookCard.innerHTML = `
+            <img src="${book.cover_url}" alt="${book.title} cover" class="book-cover" onerror="this.src='/images/default-book-cover.jpg';">
+            <div class="book-details">
+              <h3 class="book-title">${book.title}</h3>
+              <p class="book-author">by ${book.author}</p>
+              <p class="book-rating">${formattedRating}/10</p>
+              <p class="book-summary">${book.short_summary}</p>
+              <p class="book-isbn">ISBN: ${book.isbn}</p>
+            </div>
           `;
-          booksContainer.appendChild(bookDiv);
+
+          booksList.appendChild(bookCard);
         });
       } catch (error) {
+        // Hide loading indicator
+        loadingElement.style.display = "none";
+
         console.error("Error fetching books:", error);
         document.querySelector(
           "#book-container"
