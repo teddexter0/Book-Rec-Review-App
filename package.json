@@ -5,9 +5,10 @@
     "main": "server.js",
     "type": "module",
     "scripts": {
-        "dev": "webpack --watch",
-        "start": "nodemon Back-end/server.js"
-    },
+  "dev": "webpack --watch",
+  "build": "webpack",
+  "start": "node Back-end/server.js"
+},
     "dependencies": {
         "body-parser": "^1.20.2",
         "dotenv": "^16.5.0",
