@@ -19,6 +19,127 @@ const bookRecommendations = {
         "The spirited Elizabeth Bennet faces mounting pressure from her status-conscious mother to secure a suitable marriage. But when Elizabeth meets the handsome but enigmatic Mr. Darcy, pride and prejudice complicate their relationship.",
     },
     {
+      title: "Jane Eyre",
+      author: "Charlotte Brontë",
+      isbn: "9780141441146",
+      rating: 8.9,
+      short_summary:
+        "The story of a passionate young woman who defies Victorian convention by escaping a harsh upbringing to become a governess. When she falls in love with her enigmatic employer, Mr. Rochester, she discovers a secret that could destroy their relationship.",
+    },
+    {
+      title: "Call Me by Your Name",
+      author: "André Aciman",
+      isbn: "9781250169440",
+      rating: 8.7,
+      short_summary:
+        "During a sun-drenched summer on the Italian Riviera, 17-year-old Elio falls in love with his father's research assistant, Oliver. Their passionate affair transforms both their lives and lingers in their memories long after it ends.",
+    },
+    {
+      title: "Red, White & Royal Blue",
+      author: "Casey McQuiston",
+      isbn: "9781250316776",
+      rating: 8.5,
+      short_summary:
+        "When America's First Son falls in love with the Prince of Wales after an incident creates a media scandal, their secret relationship could derail his mother's reelection campaign and upend international relations.",
+    },
+    {
+      title: "Wuthering Heights",
+      author: "Emily Brontë",
+      isbn: "9780141439556",
+      rating: 8.8,
+      short_summary:
+        "The turbulent and passionate story of Heathcliff and Catherine Earnshaw, whose love transcends social class and death itself. Their obsessive love eventually destroys them and many around them.",
+    },
+    {
+      title: "The Bride Test",
+      author: "Helen Hoang",
+      isbn: "9780451490827",
+      rating: 8.3,
+      short_summary:
+        "Khai Diep avoids relationships due to his autism making him believe he has no feelings. His mother returns to Vietnam to find him a bride and brings back Esme Tran, a mixed-race girl with dreams of finding her American father.",
+    },
+    {
+      title: "The Song of Achilles",
+      author: "Madeline Miller",
+      isbn: "9780062060624",
+      rating: 9.0,
+      short_summary:
+        "A retelling of Homer's Iliad told from the perspective of Patroclus, who is exiled to the court of King Peleus where he meets the king's perfect son, Achilles. The two form an inseparable bond that follows them into the Trojan War.",
+    },
+    {
+      title: "Normal People",
+      author: "Sally Rooney",
+      isbn: "9781984822185",
+      rating: 8.6,
+      short_summary:
+        "The story of Connell and Marianne who grow up in the same small town in Ireland. They pretend not to know each other in school, where Connell is popular and Marianne is a loner, but a connection that has grown between them lasts long into adulthood.",
+    },
+    {
+      title: "Beach Read",
+      author: "Emily Henry",
+      isbn: "9781984806734",
+      rating: 8.4,
+      short_summary:
+        "A romance writer who no longer believes in love and a literary writer stuck in a rut engage in a summer-long challenge to get them out of their creative blocks, with unexpected results.",
+    },
+    {
+      title: "It Ends with Us",
+      author: "Colleen Hoover",
+      isbn: "9781501110368",
+      rating: 8.7,
+      short_summary:
+        "Lily hasn't always had it easy, but she's worked hard to create the life she wants. When she meets neurosurgeon Ryle Kincaid, she falls for him despite his aversion to relationships. But when Atlas Corrigan suddenly reappears, her relationship with Ryle is threatened.",
+    },
+    {
+      title: "Persuasion",
+      author: "Jane Austen",
+      isbn: "9780141439686",
+      rating: 8.8,
+      short_summary:
+        "Anne Elliot was persuaded to break off her engagement to Frederick Wentworth eight years ago. When he returns from the Napoleonic Wars as a wealthy naval captain, the two are thrown together again, and old feelings resurface.",
+    },
+    {
+      title: "Bridgerton: The Duke and I",
+      author: "Julia Quinn",
+      isbn: "9780062353597",
+      rating: 8.2,
+      short_summary:
+        "In Regency London, Daphne Bridgerton and the Duke of Hastings form a fake courtship to keep marriage-minded mothers at bay for him and attract suitors for her. Their plan works too well as they find themselves falling for each other.",
+    },
+    {
+      title: "Eleanor & Park",
+      author: "Rainbow Rowell",
+      isbn: "9781250012579",
+      rating: 8.4,
+      short_summary:
+        "Set over the course of one school year in 1986, this is the story of two misfits who meet on the school bus and develop an unlikely relationship, first through comics and mix tapes, and then something deeper.",
+    },
+    {
+      title: "The Light We Lost",
+      author: "Jill Santopolo",
+      isbn: "9780735212756",
+      rating: 8.3,
+      short_summary:
+        "Lucy and Gabe meet on September 11, 2001, and decide that day to live life differently. Over thirteen years, they separate and come together, experiencing life's joys and sorrows, and must ultimately make a choice between love and destiny.",
+    },
+    {
+      title: "The Wedding Date",
+      author: "Jasmine Guillory",
+      isbn: "9780399587665",
+      rating: 8.0,
+      short_summary:
+        "When Alexa agrees to attend a wedding as Drew's fake girlfriend after they get stuck in an elevator together, they're surprised by their strong chemistry and genuine connection. But with their different cities and lives, can they make it work?",
+    },
+    {
+      title: "A Court of Thorns and Roses",
+      author: "Sarah J. Maas",
+      isbn: "9781619634442",
+      rating: 8.5,
+      short_summary:
+        "When huntress Feyre kills a wolf in the woods, a beast-like creature arrives to demand retribution. Dragged to a magical realm she only knows about from legends, Feyre discovers her captor is one of the lethal, immortal faeries who once ruled her world.",
+    },
+
+    {
       title: "Outlander",
       author: "Diana Gabaldon",
       isbn: "9780440212560",
@@ -75,6 +196,126 @@ const bookRecommendations = {
       rating: 8.8,
       short_summary:
         "On their fifth wedding anniversary, Nick Dunne reports that his wife, Amy, has gone missing. Under pressure from the police and a growing media frenzy, Nick's portrait of a blissful marriage begins to crumble.",
+    },
+    {
+      title: "In the Woods",
+      author: "Tana French",
+      isbn: "9780143113492",
+      rating: 8.5,
+      short_summary:
+        "Detective Rob Ryan and his partner Cassie investigate the murder of a 12-year-old girl in a Dublin suburb. Twenty years earlier, Ryan was found in the same woods, traumatized and unable to recall what happened to his missing friends.",
+    },
+    {
+      title: "The No. 1 Ladies' Detective Agency",
+      author: "Alexander McCall Smith",
+      isbn: "9781400034772",
+      rating: 8.3,
+      short_summary:
+        "In Botswana, Precious Ramotswe starts the country's first female-owned detective agency. With intuition and wisdom, she helps people solve the mysteries in their lives, from missing husbands to con men.",
+    },
+    {
+      title: "Murder on the Orient Express",
+      author: "Agatha Christie",
+      isbn: "9780062073501",
+      rating: 8.9,
+      short_summary:
+        "Famous detective Hercule Poirot investigates the murder of a wealthy American aboard the Orient Express, stranded by a snowstorm with thirteen suspicious passengers who all had connections to the victim.",
+    },
+    {
+      title: "The Cuckoo's Calling",
+      author: "Robert Galbraith",
+      isbn: "9780316206853",
+      rating: 8.2,
+      short_summary:
+        "Private detective Cormoran Strike investigates a supermodel's suicide. As he delves into the world of the rich and famous, he uncovers a complex conspiracy behind her death. The first in J.K. Rowling's detective series written under a pseudonym.",
+    },
+    {
+      title: "In Cold Blood",
+      author: "Truman Capote",
+      isbn: "9780679745587",
+      rating: 8.8,
+      short_summary:
+        "A pioneering example of true crime, this non-fiction novel details the 1959 murders of a Kansas farming family and the investigation that led to the capture, trial, and execution of the killers.",
+    },
+    {
+      title: "Rebecca",
+      author: "Daphne du Maurier",
+      isbn: "9780380730407",
+      rating: 8.7,
+      short_summary:
+        "A young woman marries wealthy widower Maxim de Winter and moves to his estate, Manderley, where she finds herself living in the shadow of his first wife, Rebecca, whose legacy is kept alive by the sinister housekeeper Mrs. Danvers.",
+    },
+    {
+      title: "The Secret History",
+      author: "Donna Tartt",
+      isbn: "9781400031702",
+      rating: 8.9,
+      short_summary:
+        "A group of classics students at an elite New England college descend into a world of twisted morality and corruption. When one of them is murdered, the others must deal with the consequences of their actions.",
+    },
+    {
+      title: "The Thursday Murder Club",
+      author: "Richard Osman",
+      isbn: "9780241425442",
+      rating: 8.5,
+      short_summary:
+        "Four friends in a retirement village meet weekly to solve cold cases for fun. When a real murder occurs on their doorstep, they find themselves in the middle of their first live investigation.",
+    },
+    {
+      title: "Sharp Objects",
+      author: "Gillian Flynn",
+      isbn: "9780307341556",
+      rating: 8.4,
+      short_summary:
+        "Reporter Camille Preaker returns to her hometown to cover the murders of two preteen girls. Trying to unravel the psychological puzzle of her own past, she finds herself identifying with the young victims a bit too strongly.",
+    },
+    {
+      title: "The Woman in Cabin 10",
+      author: "Ruth Ware",
+      isbn: "9781501132957",
+      rating: 8.2,
+      short_summary:
+        "Travel journalist Lo Blacklock is given the assignment of a lifetime: a week on a luxury cruise. But during the journey, she witnesses a woman being thrown overboard—a woman who supposedly never existed.",
+    },
+    {
+      title: "Big Little Lies",
+      author: "Liane Moriarty",
+      isbn: "9780425274866",
+      rating: 8.5,
+      short_summary:
+        "A murder occurs at an elementary school trivia night, but neither the victim nor the killer is immediately revealed. The story explores the events leading up to the crime through the perspectives of three mothers whose children attend the school.",
+    },
+    {
+      title: "The Guest List",
+      author: "Lucy Foley",
+      isbn: "9780062868930",
+      rating: 8.0,
+      short_summary:
+        "On a remote island off the coast of Ireland, guests gather for the wedding of a magazine publisher and a reality TV star. As a storm approaches, secrets emerge and someone ends up dead.",
+    },
+    {
+      title: "The Girl on the Train",
+      author: "Paula Hawkins",
+      isbn: "9781594634024",
+      rating: 8.3,
+      short_summary:
+        "Rachel takes the same commuter train every day and watches a seemingly perfect couple through the window. One day, she witnesses something shocking and becomes entangled in the investigation that follows.",
+    },
+    {
+      title: "The 7½ Deaths of Evelyn Hardcastle",
+      author: "Stuart Turton",
+      isbn: "9781492657965",
+      rating: 8.6,
+      short_summary:
+        "At a gala at Blackheath House, Evelyn Hardcastle will die—again. She's been murdered hundreds of times, and Aiden Bishop must solve her murder by inhabiting the bodies of eight different witnesses. Each day, Aiden wakes in a new host.",
+    },
+    {
+      title: "Knives Out",
+      author: "Linda Castillo",
+      isbn: "9781250142863",
+      rating: 8.4,
+      short_summary:
+        "When renowned crime novelist Harlan Thrombey is found dead at his estate, the inquisitive Detective Benoit Blanc is mysteriously enlisted to investigate. He must sift through a web of lies to uncover the truth.",
     },
     {
       title: "The Girl with the Dragon Tattoo",
@@ -135,6 +376,126 @@ const bookRecommendations = {
         "Set in the distant future, Dune tells the story of Paul Atreides, whose family accepts stewardship of the planet Arrakis, the only source of the coveted spice melange, the most valuable substance in the universe.",
     },
     {
+      title: "Ready Player One",
+      author: "Ernest Cline",
+      isbn: "9780307887443",
+      rating: 8.8,
+      short_summary:
+        "In a dystopian 2045, people escape reality in the virtual reality world OASIS. When its creator dies, he leaves his fortune to the first person who can find an Easter egg hidden within, triggering a contest that grips the world.",
+    },
+    {
+      title: "The Left Hand of Darkness",
+      author: "Ursula K. Le Guin",
+      isbn: "9780441478125",
+      rating: 8.7,
+      short_summary:
+        "An envoy from Earth attempts to bring the planet Gethen into an interstellar alliance, but must first understand its ambisexual inhabitants who can change their gender, and navigate its complex politics and harsh winter environment.",
+    },
+    {
+      title: "Hyperion",
+      author: "Dan Simmons",
+      isbn: "9780553283686",
+      rating: 8.9,
+      short_summary:
+        "On the eve of Armageddon, with the entire galaxy at war, seven pilgrims set out on a final journey to the time tombs on Hyperion, where the Shrike, a creature that kills with infinite pain, awaits. Each carries a desperate hope and a terrible secret.",
+    },
+    {
+      title: "Children of Time",
+      author: "Adrian Tchaikovsky",
+      isbn: "9781447273301",
+      rating: 8.8,
+      short_summary:
+        "The last remnants of humanity leave Earth for a terraformed planet, only to find it harbors an evolutionary experiment gone wrong: a species of intelligent spiders is now the dominant life form.",
+    },
+    {
+      title: "Station Eleven",
+      author: "Emily St. John Mandel",
+      isbn: "9780804172448",
+      rating: 8.6,
+      short_summary:
+        "Set in the Great Lakes region after a fictional swine flu pandemic has devastated the world, the novel follows a traveling Shakespeare company that performs for the remaining settlements.",
+    },
+    {
+      title: "The Long Way to a Small, Angry Planet",
+      author: "Becky Chambers",
+      isbn: "9781473619814",
+      rating: 8.5,
+      short_summary:
+        "Rosemary joins the diverse crew of the Wayfarer, a wormhole-building spaceship, as they embark on a mission to build a hyperspace tunnel to a distant planet, facing dangers and forming deep bonds along the way.",
+    },
+    {
+      title: "Red Rising",
+      author: "Pierce Brown",
+      isbn: "9780345539809",
+      rating: 8.7,
+      short_summary:
+        "In a color-coded society on Mars, lower-caste 'Red' miner Darrow infiltrates the ruling 'Gold' caste to bring down their cruel system from within after his wife is executed for singing a forbidden song.",
+    },
+    {
+      title: "The Forever War",
+      author: "Joe Haldeman",
+      isbn: "9780312536633",
+      rating: 8.5,
+      short_summary:
+        "Private William Mandella fights in an interstellar war against the Taurans. Due to time dilation, each tour of duty means centuries pass on Earth, making him increasingly alienated from the civilization he's supposedly defending.",
+    },
+    {
+      title: "Ancillary Justice",
+      author: "Ann Leckie",
+      isbn: "9780316246620",
+      rating: 8.4,
+      short_summary:
+        "Once a starship AI controlling thousands of corpse soldiers, Breq is now confined to a single human body. She pursues a quest for revenge against the Lord of the Radch empire who betrayed her and destroyed her ship.",
+    },
+    {
+      title: "Old Man's War",
+      author: "John Scalzi",
+      isbn: "9780765348272",
+      rating: 8.5,
+      short_summary:
+        "75-year-old John Perry joins the Colonial Defense Forces, which transfers his consciousness to a genetically enhanced young body, then sends him to fight in humanity's wars for colonies among the stars.",
+    },
+    {
+      title: "The Road",
+      author: "Cormac McCarthy",
+      isbn: "9780307387899",
+      rating: 8.8,
+      short_summary:
+        "A father and his son walk alone through a post-apocalyptic America, struggling to survive and preserve their humanity in a world where most have turned to barbarism and cannibalism.",
+    },
+    {
+      title: "The Expanse: Leviathan Wakes",
+      author: "James S.A. Corey",
+      isbn: "9780316129084",
+      rating: 8.6,
+      short_summary:
+        "Humanity has colonized the solar system, but tensions rise between Earth, Mars, and the Belt. When a ship's ice miner discovers a derelict vessel, he finds himself in possession of a secret that could trigger interplanetary war.",
+    },
+    {
+      title: "Contact",
+      author: "Carl Sagan",
+      isbn: "9781501197987",
+      rating: 8.7,
+      short_summary:
+        "Astronomer Ellie Arroway discovers a radio signal from an extraterrestrial civilization, leading to humanity's first encounter with intelligent alien life and transforming her scientific worldview and spiritual understanding.",
+    },
+    {
+      title: "Recursion",
+      author: "Blake Crouch",
+      isbn: "9781524759780",
+      rating: 8.6,
+      short_summary:
+        "Detective Barry Sutton investigates False Memory Syndrome, a mysterious condition where people suddenly remember alternate lives. Neuroscientist Helena Smith has invented a technology to preserve memories, but it's being used to rewrite reality itself.",
+    },
+    {
+      title: "The Calculating Stars",
+      author: "Mary Robinette Kowal",
+      isbn: "9780765378385",
+      rating: 8.5,
+      short_summary:
+        "In an alternate 1952, a meteorite destroys Washington D.C. and accelerates the need for space colonization. Mathematician and WASP pilot Elma York fights to become the world's first female astronaut despite institutional sexism.",
+    },
+    {
       title: "Neuromancer",
       author: "William Gibson",
       isbn: "9780441569595",
@@ -192,6 +553,127 @@ const bookRecommendations = {
       short_summary:
         "Kvothe, an infamous magician, adventurer, and musician, tells the story of his path from childhood in a troupe of traveling players to a homeless orphan to his years at a university of magic.",
     },
+    {
+      title: "Circe",
+      author: "Madeline Miller",
+      isbn: "9780316556347",
+      rating: 9.0,
+      short_summary:
+        "The daughter of the titan Helios, Circe discovers her power of witchcraft and is banished to a deserted island. There, she hones her skills and crosses paths with famous mythological figures, ultimately finding her own power and voice.",
+    },
+    {
+      title: "Six of Crows",
+      author: "Leigh Bardugo",
+      isbn: "9781627792127",
+      rating: 8.9,
+      short_summary:
+        "Criminal prodigy Kaz Brekker is offered a chance at a deadly heist that could make him rich beyond his wildest dreams. To pull it off, he assembles a crew of six dangerous outcasts, each with a unique skill and their own agenda.",
+    },
+    {
+      title: "American Gods",
+      author: "Neil Gaiman",
+      isbn: "9780380789030",
+      rating: 8.8,
+      short_summary:
+        "Recently released from prison, Shadow Moon meets the mysterious Mr. Wednesday, who hires him as a bodyguard. Shadow soon becomes embroiled in a conflict between the Old Gods of mythology and the New Gods of technology and media.",
+    },
+    {
+      title: "The Priory of the Orange Tree",
+      author: "Samantha Shannon",
+      isbn: "9781635570298",
+      rating: 8.6,
+      short_summary:
+        "In this epic fantasy, the divided East and West maintain an uneasy peace as the rising threat of dragons looms. Three women—a queen, a dragonrider, and a lady-in-waiting—hold the power to either save the world or condemn it.",
+    },
+    {
+      title: "The Night Circus",
+      author: "Erin Morgenstern",
+      isbn: "9780307744432",
+      rating: 8.7,
+      short_summary:
+        "The circus arrives without warning. Two young magicians, Celia and Marco, are pitted against each other in a mysterious competition within the magical night circus, only to fall in love with disastrous consequences.",
+    },
+    {
+      title: "Uprooted",
+      author: "Naomi Novik",
+      isbn: "9780804179058",
+      rating: 8.8,
+      short_summary:
+        "Agnieszka loves her valley home and her quiet village, but the corrupted Wood stands on the border, filled with malevolent power. Her people rely on the cold, ambitious wizard known as the Dragon to keep the Wood's dark influence at bay.",
+    },
+    {
+      title: "The City & The City",
+      author: "China Miéville",
+      isbn: "9780345497529",
+      rating: 8.4,
+      short_summary:
+        "Inspector Tyador Borlú of the Extreme Crime Squad investigates the murder of a woman found in the city of Besźel. The case leads him to Ul Qoma, a city that occupies the same physical space as Besźel but exists in a parallel reality.",
+    },
+    {
+      title: "The Magicians",
+      author: "Lev Grossman",
+      isbn: "9780452296299",
+      rating: 8.3,
+      short_summary:
+        "Quentin Coldwater is a high school senior secretly obsessed with a series of fantasy novels. When he's admitted to a secretive college for magic in upstate New York, he discovers that the magical world from his childhood books is real and far darker than he imagined.",
+    },
+    {
+      title: "The Poppy War",
+      author: "R.F. Kuang",
+      isbn: "9780062662569",
+      rating: 8.7,
+      short_summary:
+        "When Rin aces the Keju—the Empire-wide test to find talented youth—she surprises everyone by gaining admission to Sinegard, the most elite military school. There, she discovers her shamanic powers and the terrible cost of war.",
+    },
+    {
+      title: "The First Law Trilogy: The Blade Itself",
+      author: "Joe Abercrombie",
+      isbn: "9781591025948",
+      rating: 8.5,
+      short_summary:
+        "In this gritty fantasy, Inquisitor Glokta, a crippled ex-war hero turned torturer; Logen Ninefingers, a notorious barbarian trying to make peace; and Jezal dan Luthar, a vain nobleman, are drawn into the machinations of Bayaz, the First of the Magi.",
+    },
+    {
+      title: "Stardust",
+      author: "Neil Gaiman",
+      isbn: "9780061689246",
+      rating: 8.4,
+      short_summary:
+        "To win the heart of his beloved, Tristran Thorn journeys to the realm of Faerie to retrieve a fallen star. What he finds instead is a spirited young woman who becomes the target of ruthless hunters and supernatural creatures.",
+    },
+    {
+      title: "The Once and Future King",
+      author: "T.H. White",
+      isbn: "9780441627400",
+      rating: 8.9,
+      short_summary:
+        "This beloved retelling of the Arthurian legend follows young Arthur from his early training under the wizard Merlyn through his rise to become King of England, the founding of the Round Table, and its eventual dissolution.",
+    },
+    {
+      title: "The Lies of Locke Lamora",
+      author: "Scott Lynch",
+      isbn: "9780553588941",
+      rating: 8.8,
+      short_summary:
+        "Locke Lamora is an orphan turned thief who leads the Gentleman Bastards, an elite group of con artists operating in the island city of Camorr. Their elaborate schemes target the wealthy nobility until a mysterious figure threatens their existence.",
+    },
+    {
+      title: "Children of Blood and Bone",
+      author: "Tomi Adeyemi",
+      isbn: "9781250170972",
+      rating: 8.5,
+      short_summary:
+        "In a West African-inspired fantasy world where magic has been outlawed, Zélie Adebola has one chance to restore magic to her people and strike against the monarchy that killed her mother and subjugated her kind.",
+    },
+    {
+      title: "The Bear and the Nightingale",
+      author: "Katherine Arden",
+      isbn: "9781101885956",
+      rating: 8.6,
+      short_summary:
+        "At the edge of the Russian wilderness, winter lasts most of the year and the snowdrifts grow taller than houses. Vasilisa defies tradition to protect her family and village from dark forces that emerge from the forest.",
+    },
+
     {
       title: "The Hobbit",
       author: "J.R.R. Tolkien",
@@ -251,6 +733,127 @@ const bookRecommendations = {
         "Rachel Watson takes the same commuter train every day, which passes by her old house where her ex-husband lives with his new wife. One day, she sees something shocking, and becomes entangled in a missing persons investigation.",
     },
     {
+      title: "You",
+      author: "Caroline Kepnes",
+      isbn: "9781476785608",
+      rating: 8.3,
+      short_summary:
+        "Bookstore manager Joe Goldberg becomes obsessed with aspiring writer Guinevere Beck. His infatuation quickly spirals into a toxic pursuit as he uses technology and social media to stalk her and remove obstacles to their relationship.",
+    },
+    {
+      title: "Dark Places",
+      author: "Gillian Flynn",
+      isbn: "9780307341570",
+      rating: 8.2,
+      short_summary:
+        "Libby Day was seven when her mother and sisters were murdered. Her testimony put her brother in prison for life. Twenty-five years later, a group of amateur investigators believes he's innocent, forcing Libby to revisit the traumatic events of that night.",
+    },
+    {
+      title: "Misery",
+      author: "Stephen King",
+      isbn: "9781501156748",
+      rating: 8.7,
+      short_summary:
+        "After a car accident, famous novelist Paul Sheldon is rescued by his 'number one fan,' Annie Wilkes. As she nurses him back to health, her devotion turns to obsession, especially when she discovers he's killed off her favorite character.",
+    },
+    {
+      title: "The Girl with All the Gifts",
+      author: "M.R. Carey",
+      isbn: "9780356500157",
+      rating: 8.4,
+      short_summary:
+        "In a dystopian future, most of humanity has been infected by a fungus that turns people into 'hungries.' A group of children who are infected but retain their mental abilities may hold the key to humanity's future.",
+    },
+    {
+      title: "Defending Jacob",
+      author: "William Landay",
+      isbn: "9780345533661",
+      rating: 8.4,
+      short_summary:
+        "When his 14-year-old son is accused of murdering a classmate, assistant district attorney Andy Barber finds his world torn apart as he tries to prove his son's innocence while grappling with the possibility that the boy inherited a 'murder gene'.",
+    },
+    {
+      title: "No Exit",
+      author: "Taylor Adams",
+      isbn: "9780062875655",
+      rating: 8.2,
+      short_summary:
+        "During a blizzard, college student Darby Thorne is stranded at a highway rest stop with four strangers. When she discovers a kidnapped child in one of their vehicles, she must figure out which person is the kidnapper and how to save the child.",
+    },
+    {
+      title: "The Good Daughter",
+      author: "Karin Slaughter",
+      isbn: "9780062430243",
+      rating: 8.5,
+      short_summary:
+        "Twenty-eight years ago, Charlotte and Samantha Quinn's happy small-town life was torn apart by a terrifying attack that left their mother dead. Now, another violent attack in their hometown brings the sisters together to uncover the truth about the crimes.",
+    },
+    {
+      title: "The Kind Worth Killing",
+      author: "Peter Swanson",
+      isbn: "9780062267535",
+      rating: 8.6,
+      short_summary:
+        "On a night flight, Ted Severson meets Lily Kintner and reveals that he suspects his wife is having an affair. In a game of truth, Ted jokes that he could kill his wife, and Lily offers to help, setting in motion a twisted tale of psychological manipulation.",
+    },
+    {
+      title: "Behind Closed Doors",
+      author: "B.A. Paris",
+      isbn: "9781250121004",
+      rating: 8.1,
+      short_summary:
+        "Everyone knows a couple like Jack and Grace: he has looks and wealth, she has charm and elegance. But behind the perfect façade, Grace is a prisoner in her own home, controlled by her perfect husband.",
+    },
+    {
+      title: "The Silent Wife",
+      author: "A.S.A. Harrison",
+      isbn: "9780143123231",
+      rating: 8.0,
+      short_summary:
+        "Jodi and Todd appear to be a perfect couple, but their carefully constructed façade is crumbling. As domestic tensions rise, an unexpected turn of events leads to a shocking finale.",
+    },
+    {
+      title: "Into the Water",
+      author: "Paula Hawkins",
+      isbn: "9780735211209",
+      rating: 7.9,
+      short_summary:
+        "In a town where a river runs through it, women have been drowning for centuries. When Nel Abbott is found dead in the river, her estranged sister Jules returns to care for Nel's teenage daughter and confront the town's dark history.",
+    },
+    {
+      title: "The Whisper Man",
+      author: "Alex North",
+      isbn: "9781250317995",
+      rating: 8.3,
+      short_summary:
+        "After the death of his wife, Tom Kennedy moves with his son to a new town for a fresh start. But the town has a dark past: twenty years ago, a serial killer called 'The Whisper Man' abducted and murdered five young boys. Now, history seems to be repeating itself.",
+    },
+    {
+      title: "Lock Every Door",
+      author: "Riley Sager",
+      isbn: "9781524745158",
+      rating: 8.2,
+      short_summary:
+        "Jules Larsen takes a job as an apartment sitter in the Bartholomew, one of Manhattan's most high-profile buildings. But the Bartholomew has a dark history, and as fellow apartment sitters disappear, Jules investigates the building's sinister past.",
+    },
+    {
+      title: "The Woman in White",
+      author: "Wilkie Collins",
+      isbn: "9780141439617",
+      rating: 8.5,
+      short_summary:
+        "A young art teacher encounters a mysterious woman dressed in white on a moonlit London road. Later, he travels to his new position at Limmeridge House and finds that the woman in white has a strange connection to his pupils.",
+    },
+    {
+      title: "And Then There Were None",
+      author: "Agatha Christie",
+      isbn: "9780062073488",
+      rating: 8.9,
+      short_summary:
+        "Ten strangers are lured to an isolated island mansion by a mysterious host. When they start dying one by one, they realize a killer is among them, inspired by the old nursery rhyme 'Ten Little Indians.'",
+    },
+
+    {
       title: "The Silence of the Lambs",
       author: "Thomas Harris",
       isbn: "9780312924584",
@@ -307,6 +910,62 @@ const bookRecommendations = {
       rating: 9.2,
       short_summary:
         "A groundbreaking narrative of humanity's creation and evolution that explores how biology and history have defined us and enhanced our understanding of what it means to be 'human.'",
+    },
+    {
+      title: "Born to Run",
+      author: "Christopher McDougall",
+      isbn: "9780307279187",
+      rating: 8.7,
+      short_summary:
+        "The author explores the world of the Tarahumara Indians of Mexico's Copper Canyons, legendary for their superhuman running abilities, to discover the secrets of running without pain or injury.",
+    },
+    {
+      title: "The Devil in the White City",
+      author: "Erik Larson",
+      isbn: "9780375725609",
+      rating: 8.6,
+      short_summary:
+        "A gripping account intertwining the stories of two men: Daniel H. Burnham, the architect behind the 1893 Chicago World's Fair, and H.H. Holmes, a serial killer who used the fair to lure victims to his 'Murder Castle.'",
+    },
+    {
+      title: "Guns, Germs, and Steel",
+      author: "Jared Diamond",
+      isbn: "9780393354324",
+      rating: 8.8,
+      short_summary:
+        "This Pulitzer Prize-winning book explores why some human societies became dominant while others did not, attributing success not to racial differences but to geographic, environmental, and ecological factors.",
+    },
+    {
+      title: "Bad Blood",
+      author: "John Carreyrou",
+      isbn: "9780525431992",
+      rating: 8.9,
+      short_summary:
+        "The riveting story of Elizabeth Holmes and Theranos, the multibillion-dollar biotech startup that made Holmes the world's youngest female self-made billionaire before it all came crashing down amid accusations of massive fraud.",
+    },
+    {
+      title: "The Immortal Life of Henrietta Lacks",
+      author: "Rebecca Skloot",
+      isbn: "9781400052189",
+      rating: 8.7,
+      short_summary:
+        "The story of Henrietta Lacks, whose cells—taken without her knowledge in 1951—became one of the most important tools in medicine, vital for developing the polio vaccine, cloning, gene mapping, and more.",
+    },
+    {
+      title: "Quiet: The Power of Introverts",
+      author: "Susan Cain",
+      isbn: "9780307352156",
+      rating: 8.5,
+      short_summary:
+        "Susan Cain argues that modern Western culture misunderstands and undervalues the traits and capabilities of introverted people, leading to a waste of talent, energy, and happiness.",
+    },
+    {
+      title: "The New Jim Crow",
+      author: "Michelle Alexander",
+      isbn: "9781595586438",
+      rating: 8.9,
+      short_summary:
+        "An examination of how the U.S. criminal justice system functions as a contemporary system of racial control by targeting black men through the War on Drugs and decimating communities of color.",
     },
     {
       title: "Educated",
