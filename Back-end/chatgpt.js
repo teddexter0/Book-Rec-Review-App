@@ -1687,9 +1687,10 @@ router.get("/book/:genre", async (req, res) => {
     if (books.length === 0) {
       return res.json({ books: [], genre });
     }
+    /*************  ✨ Windsurf Command 🌟  *************/
 
     // Shuffle the books to get different recommendations each time
-    books = [...books].sort(() => Math.random() - 0.5).slice(0, 5);
+    books = [...books].sort(() => Math.random() - 0.5);
 
     // Add cover URLs to each book
     for (const book of books) {
