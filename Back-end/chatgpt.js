@@ -1018,6 +1018,126 @@ const bookRecommendations = {
   ],
   "Self-Help": [
     {
+      title: "Can't Hurt Me",
+      author: "David Goggins",
+      isbn: "9781544512280",
+      rating: 9.4,
+      short_summary:
+        "David Goggins shares his life story and how he transformed himself through self-discipline, mental toughness, and hard work.",
+    },
+    {
+      title: "The 48 Laws of Power",
+      author: "Robert Greene",
+      isbn: "9780140280197",
+      rating: 9.2,
+      short_summary:
+        "A guide to understanding and mastering the dynamics of power through historical examples and strategies.",
+    },
+    {
+      title: "The Four Agreements",
+      author: "Don Miguel Ruiz",
+      isbn: "9781878424310",
+      rating: 9.0,
+      short_summary:
+        "Offers a code of conduct based on ancient Toltec wisdom to achieve personal freedom and true happiness.",
+    },
+    {
+      title: "How to Win Friends and Influence People",
+      author: "Dale Carnegie",
+      isbn: "9780671027032",
+      rating: 9.1,
+      short_summary:
+        "Timeless principles for effective communication and relationship-building to achieve personal and professional success.",
+    },
+    {
+      title: "Rich Dad Poor Dad",
+      author: "Robert T. Kiyosaki",
+      isbn: "9781612680194",
+      rating: 8.9,
+      short_summary:
+        "Contrasts the financial philosophies of the author's two 'dads' to teach the importance of financial literacy and independence.",
+    },
+    {
+      title: "The Power of Habit",
+      author: "Charles Duhigg",
+      isbn: "9780812981605",
+      rating: 9.0,
+      short_summary:
+        "Explores the science of habit formation and how habits can be changed to improve our lives.",
+    },
+    {
+      title: "Deep Work",
+      author: "Cal Newport",
+      isbn: "9781455586691",
+      rating: 9.1,
+      short_summary:
+        "Emphasizes the importance of focused work in a distracted world and provides strategies to cultivate deep concentration.",
+    },
+    {
+      title: "Grit",
+      author: "Angela Duckworth",
+      isbn: "9781501111112",
+      rating: 8.8,
+      short_summary:
+        "Investigates the power of passion and perseverance in achieving long-term goals.",
+    },
+    {
+      title: "The Magic of Thinking Big",
+      author: "David J. Schwartz",
+      isbn: "9780671646783",
+      rating: 8.7,
+      short_summary:
+        "Encourages readers to set high goals and think positively to achieve success.",
+    },
+    {
+      title: "The Miracle Morning",
+      author: "Hal Elrod",
+      isbn: "9780979019715",
+      rating: 8.6,
+      short_summary:
+        "Introduces a morning routine designed to transform your life by focusing on personal development activities.",
+    },
+    {
+      title: "The War of Art",
+      author: "Steven Pressfield",
+      isbn: "9781936891023",
+      rating: 8.9,
+      short_summary:
+        "Addresses the challenges of creative work and offers strategies to overcome resistance and achieve artistic success.",
+    },
+    {
+      title: "Think and Grow Rich",
+      author: "Napoleon Hill",
+      isbn: "9781585424337",
+      rating: 9.0,
+      short_summary:
+        "A classic guide to achieving personal and financial success through positive thinking and goal setting.",
+    },
+    {
+      title: "The Power of Positive Thinking",
+      author: "Norman Vincent Peale",
+      isbn: "9780743234801",
+      rating: 8.7,
+      short_summary:
+        "Promotes the benefits of optimism and faith in achieving a fulfilling life.",
+    },
+    {
+      title: "Drive: The Surprising Truth About What Motivates Us",
+      author: "Daniel H. Pink",
+      isbn: "9781594484803",
+      rating: 8.8,
+      short_summary:
+        "Explores the psychology of motivation and how autonomy, mastery, and purpose drive human behavior.",
+    },
+    {
+      title: "Awaken the Giant Within",
+      author: "Tony Robbins",
+      isbn: "9780671791544",
+      rating: 8.9,
+      short_summary:
+        "Provides strategies for taking control of your emotions, finances, relationships, and life.",
+    },
+    {
       title: "Atomic Habits",
       author: "James Clear",
       isbn: "9780735211292",
@@ -1075,6 +1195,126 @@ const bookRecommendations = {
     },
   ],
   Horror: [
+    {
+      title: "The Shining",
+      author: "Stephen King",
+      isbn: "9780307743657",
+      rating: 9.2,
+      short_summary:
+        "A family heads to an isolated hotel for the winter where an evil presence influences the father into violence.",
+    },
+    {
+      title: "Bird Box",
+      author: "Josh Malerman",
+      isbn: "9780062259653",
+      rating: 8.7,
+      short_summary:
+        "In a post-apocalyptic world, a mother and her two children must make it through a forest and river blindfolded to avoid supernatural entities.",
+    },
+    {
+      title: "The Silence of the Lambs",
+      author: "Thomas Harris",
+      isbn: "9780312924584",
+      rating: 9.0,
+      short_summary:
+        "A young FBI trainee seeks the help of imprisoned cannibalistic killer Dr. Hannibal Lecter to catch another serial killer.",
+    },
+    {
+      title: "The Only Good Indians",
+      author: "Stephen Graham Jones",
+      isbn: "9781982136451",
+      rating: 8.8,
+      short_summary:
+        "Four American Indian men are haunted by a disturbing event from their youth, leading to a relentless, supernatural revenge.",
+    },
+    {
+      title: "The Troop",
+      author: "Nick Cutter",
+      isbn: "9781476717722",
+      rating: 8.6,
+      short_summary:
+        "A group of boys on a scouting trip encounter a bioengineered horror in the wilderness.",
+    },
+    {
+      title: "The Fisherman",
+      author: "John Langan",
+      isbn: "9781945373156",
+      rating: 8.9,
+      short_summary:
+        "Two widowers discover a mysterious fishing spot with a dark history and supernatural elements.",
+    },
+    {
+      title: "Mexican Gothic",
+      author: "Silvia Moreno-Garcia",
+      isbn: "9780525620785",
+      rating: 8.8,
+      short_summary:
+        "A glamorous socialite is called to a haunted house in 1950s Mexico and uncovers terrifying family secrets.",
+    },
+    {
+      title: "Pet Sematary",
+      author: "Stephen King",
+      isbn: "9781501156700",
+      rating: 9.0,
+      short_summary:
+        "A family's move to a new home near a pet cemetery leads to sinister events after they discover what lies beyond it.",
+    },
+    {
+      title: "The Haunting of Hill House",
+      author: "Shirley Jackson",
+      isbn: "9780143039983",
+      rating: 9.1,
+      short_summary:
+        "A psychological horror classic about a group of people exploring a supposedly haunted mansion.",
+    },
+    {
+      title: "The Cabin at the End of the World",
+      author: "Paul Tremblay",
+      isbn: "9780062679109",
+      rating: 8.7,
+      short_summary:
+        "A vacationing family is taken hostage by strangers who claim the world is ending and they must make a sacrifice.",
+    },
+    {
+      title: "The Ritual",
+      author: "Adam Nevill",
+      isbn: "9780316176538",
+      rating: 8.8,
+      short_summary:
+        "A group of old college friends get lost in a Scandinavian forest and discover ancient horrors stalking them.",
+    },
+    {
+      title: "Something Wicked This Way Comes",
+      author: "Ray Bradbury",
+      isbn: "9780062072061",
+      rating: 8.6,
+      short_summary:
+        "Two boys face a mysterious and evil carnival that arrives in their town, offering dark temptations.",
+    },
+    {
+      title: "Dracula",
+      author: "Bram Stoker",
+      isbn: "9780141439846",
+      rating: 9.3,
+      short_summary:
+        "The original vampire horror novel that introduced Count Dracula and shaped the gothic horror genre.",
+    },
+    {
+      title: "House of Leaves",
+      author: "Mark Z. Danielewski",
+      isbn: "9780375703768",
+      rating: 8.9,
+      short_summary:
+        "A haunting story within a story about a house that is bigger on the inside than it is on the outside.",
+    },
+    {
+      title: "The Exorcist",
+      author: "William Peter Blatty",
+      isbn: "9780061007224",
+      rating: 9.0,
+      short_summary:
+        "Based on a true story, this novel follows a young girl possessed by a demon and the priests who attempt an exorcism.",
+    },
     {
       title: "It",
       author: "Stephen King",
@@ -1134,6 +1374,86 @@ const bookRecommendations = {
   ],
   Biography: [
     {
+      title: "Long Walk to Freedom",
+      author: "Nelson Mandela",
+      isbn: "9780316548182",
+      rating: 9.4,
+      short_summary:
+        "Mandela’s journey from rural village to prisoner to president of South Africa—a story of resilience and reconciliation.",
+    },
+    {
+      title: "The Diary of a Young Girl",
+      author: "Anne Frank",
+      isbn: "9780553296983",
+      rating: 9.2,
+      short_summary:
+        "The wartime diary of a Jewish girl hiding from the Nazis—filled with hope, fear, and humanity.",
+    },
+    {
+      title: "Steve Jobs",
+      author: "Walter Isaacson",
+      isbn: "9781451648539",
+      rating: 9.0,
+      short_summary:
+        "A compelling portrait of the visionary Apple co-founder, drawn from exclusive interviews and insights.",
+    },
+    {
+      title: "Becoming",
+      author: "Michelle Obama",
+      isbn: "9781524763138",
+      rating: 8.8,
+      short_summary:
+        "The former First Lady’s deeply personal story of growth, purpose, and breaking barriers.",
+    },
+    {
+      title: "Educated",
+      author: "Tara Westover",
+      isbn: "9780399590504",
+      rating: 9.1,
+      short_summary:
+        "Raised by survivalist parents, Tara escapes her isolated upbringing through education—against all odds.",
+    },
+    {
+      title: "When Breath Becomes Air",
+      author: "Paul Kalanithi",
+      isbn: "9780812988406",
+      rating: 9.2,
+      short_summary:
+        "A young neurosurgeon faces terminal cancer and reflects on life, faith, and meaning.",
+    },
+    {
+      title: "Born a Crime",
+      author: "Trevor Noah",
+      isbn: "9780399588174",
+      rating: 9.0,
+      short_summary:
+        "Comedian Trevor Noah’s funny and moving tale of growing up biracial in apartheid South Africa.",
+    },
+    {
+      title: "I Am Malala",
+      author: "Malala Yousafzai",
+      isbn: "9780316322423",
+      rating: 8.9,
+      short_summary:
+        "A courageous girl stands up for education and survives a Taliban attack—her voice now inspires the world.",
+    },
+    {
+      title: "Just Mercy",
+      author: "Bryan Stevenson",
+      isbn: "9780812984965",
+      rating: 9.0,
+      short_summary:
+        "A lawyer’s powerful fight for justice and redemption in America’s broken legal system.",
+    },
+    {
+      title: "Man’s Search for Meaning",
+      author: "Viktor E. Frankl",
+      isbn: "9780807014295",
+      rating: 9.3,
+      short_summary:
+        "A Holocaust survivor and psychiatrist explores suffering, purpose, and human resilience.",
+    },
+    {
       title: "The Diary of a Young Girl",
       author: "Anne Frank",
       isbn: "9780553577129",
@@ -1191,6 +1511,86 @@ const bookRecommendations = {
     },
   ],
   Christian: [
+    {
+      title: "The Pursuit of God",
+      author: "A.W. Tozer",
+      isbn: "9781600660542",
+      rating: 9.5,
+      short_summary:
+        "A passionate call to deeper intimacy with Christ—written in 1948, but timelessly relevant.",
+    },
+    {
+      title: "Knowing God",
+      author: "J.I. Packer",
+      isbn: "9780830816507",
+      rating: 9.3,
+      short_summary:
+        "Deep theology made warm and personal—helping believers truly ‘know’ and walk with God.",
+    },
+    {
+      title: "Mere Christianity",
+      author: "C.S. Lewis",
+      isbn: "9780060652920",
+      rating: 9.4,
+      short_summary:
+        "A brilliant, logical defense of Christianity and what it means to live it out.",
+    },
+    {
+      title: "Crazy Love",
+      author: "Francis Chan",
+      isbn: "9781434768513",
+      rating: 8.8,
+      short_summary:
+        "A fiery call to radical, all-in love for God that shakes up casual Christianity.",
+    },
+    {
+      title: "Don't Waste Your Life",
+      author: "John Piper",
+      isbn: "9781581344983",
+      rating: 9.1,
+      short_summary:
+        "Live with eternity in mind—your life is short, so live it sold out for Christ.",
+    },
+    {
+      title: "The Normal Christian Life",
+      author: "Watchman Nee",
+      isbn: "9780842347105",
+      rating: 9.2,
+      short_summary:
+        "A powerful unpacking of Romans—dying with Christ, rising with Him, and walking in grace daily.",
+    },
+    {
+      title: "God's Smuggler",
+      author: "Brother Andrew",
+      isbn: "9780800793011",
+      rating: 9.0,
+      short_summary:
+        "The true story of a daring missionary who smuggled Bibles into Communist countries with prayer and faith.",
+    },
+    {
+      title: "Tortured for Christ",
+      author: "Richard Wurmbrand",
+      isbn: "9780882640011",
+      rating: 9.4,
+      short_summary:
+        "A Romanian pastor endures years of torture for preaching Jesus—his faith and love remain unbroken.",
+    },
+    {
+      title: "The Hiding Place",
+      author: "Corrie ten Boom",
+      isbn: "9780553256697",
+      rating: 9.3,
+      short_summary:
+        "A Christian family hides Jews during WWII—and faces the darkness of prison with unshakable faith.",
+    },
+    {
+      title: "Radical",
+      author: "David Platt",
+      isbn: "9781601422217",
+      rating: 8.9,
+      short_summary:
+        "A bold challenge to reject the American dream and embrace the costly call of Christ.",
+    },
     {
       title: "Mere Christianity",
       author: "C.S. Lewis",

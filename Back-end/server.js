@@ -18,14 +18,14 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "../Front-end/src/views"));
 app.use(express.static(path.resolve(__dirname, "../Front-end/public")));
 app.use("/ai", router); // Use AI routes from chatgpt.js
-
-// Show all books
+// Show all books in random order
 app.get(["/", "/index", "/home"], async (req, res) => {
   try {
     const result = await pool.query(
       "SELECT id, title, author, rating, short_summary, isbn FROM books"
     );
-    res.render("index", { books: result.rows });
+    const books = result.rows.sort(() => Math.random() - 0.5); // Randomize order
+    res.render("index", { books });
   } catch (err) {
     console.error(err.message);
   }
