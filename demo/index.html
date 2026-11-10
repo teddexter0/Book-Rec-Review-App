@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#11100e" />
+  <title>Ink With Insights — Book discovery that remembers what mattered</title>
+  <style>
+    :root{--bg:#0d0c0a;--paper:#f2eadf;--ink:#17130f;--muted:#a99d8d;--line:#302a23;--gold:#d6ad60;--card:#171411;--green:#9fc89d}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--paper);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    button,input,textarea{font:inherit}.shell{width:min(1180px,calc(100% - 32px));margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--line)}
+    .brand{font-family:Georgia,serif;font-size:1.35rem;letter-spacing:.02em}.brand i{color:var(--gold);font-style:normal}.nav-actions{display:flex;gap:10px;align-items:center}
+    .btn{border:1px solid var(--line);background:transparent;color:var(--paper);padding:10px 14px;border-radius:999px;cursor:pointer}.btn:hover{border-color:#655846}.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper);font-weight:700}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;padding:72px 0 48px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:var(--gold);font-size:.78rem;font-weight:800}
+    h1{font:700 clamp(3rem,7vw,6.4rem)/.92 Georgia,serif;margin:14px 0 20px;letter-spacing:-.045em}.sub{max-width:680px;color:#c3b8aa;font-size:1.08rem}
+    .hero-card{background:linear-gradient(145deg,#1f1a15,#12100e);border:1px solid var(--line);border-radius:30px;padding:26px;box-shadow:0 30px 80px #0008}.quote{font:1.7rem/1.25 Georgia,serif;margin:28px 0}
+    .mini{display:flex;justify-content:space-between;gap:18px;color:var(--muted);font-size:.9rem}.search-wrap{position:sticky;top:0;z-index:10;background:#0d0c0aee;backdrop-filter:blur(14px);padding:14px 0 20px}
+    .search{display:flex;gap:10px;background:#16130f;border:1px solid var(--line);padding:8px;border-radius:18px}.search input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:white;padding:12px 14px}
+    .tabs{display:flex;gap:9px;margin:22px 0 18px;flex-wrap:wrap}.tab{cursor:pointer;padding:8px 13px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}.tab.active{background:#2a231b;color:white;border-color:#5f513f}
+    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;padding-bottom:70px}.book{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;min-height:100%}
+    .cover{aspect-ratio:3/4;background:#201c17;display:grid;place-items:center;overflow:hidden}.cover img{width:100%;height:100%;object-fit:cover}.cover-fallback{font:700 1.1rem Georgia,serif;text-align:center;padding:22px;color:#d8cab8}
+    .book-body{padding:17px;display:flex;flex-direction:column;gap:10px;flex:1}.title{font:700 1.16rem/1.18 Georgia,serif}.author,.meta,.desc{color:var(--muted);font-size:.88rem}.desc{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .chips{display:flex;gap:6px;flex-wrap:wrap}.chip{font-size:.72rem;padding:4px 8px;background:#211d18;border-radius:999px;color:#cdbfae}.book-actions{display:flex;gap:8px;margin-top:auto}.book-actions .btn{flex:1;padding:8px 10px;border-radius:12px;font-size:.84rem}
+    .empty{grid-column:1/-1;border:1px dashed var(--line);border-radius:24px;padding:48px;text-align:center;color:var(--muted)}.section-title{font:700 2rem Georgia,serif;margin:20px 0 6px}.section-sub{color:var(--muted);margin-bottom:16px}
+    .drawer{position:fixed;inset:0 0 0 auto;width:min(470px,100%);background:#12100e;border-left:1px solid var(--line);z-index:30;transform:translateX(100%);transition:.25s;padding:26px;overflow:auto}.drawer.open{transform:none}.drawer-top{display:flex;justify-content:space-between;align-items:center}
+    .library-item{padding:15px 0;border-bottom:1px solid var(--line)}.rating{display:flex;gap:5px;flex-wrap:wrap}.star{cursor:pointer;color:#6e6356}.star.on{color:var(--gold)}textarea{width:100%;min-height:90px;border:1px solid var(--line);background:#0c0b09;color:white;border-radius:14px;padding:12px;margin-top:10px}
+    .consent{position:fixed;inset:auto 16px 16px 16px;max-width:760px;margin:auto;background:#eee4d7;color:#201b16;padding:18px;border-radius:20px;z-index:50;box-shadow:0 20px 80px #0009}.consent h3{margin:0 0 6px;font-family:Georgia,serif}.consent p{margin:0 0 14px;color:#5d5246}.consent-row{display:flex;gap:10px;flex-wrap:wrap}.hidden{display:none!important}
+    .status{font-size:.83rem;color:var(--green)}footer{padding:36px 0 70px;border-top:1px solid var(--line);color:var(--muted);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:48px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}} @media(max-width:560px){.shell{width:min(100% - 20px,1180px)}.nav-actions .sync{display:none}.hero{gap:24px}.grid{grid-template-columns:1fr}.search{flex-wrap:wrap}.search .btn{width:100%}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="nav"><div class="brand">Ink <i>With</i> Insights</div><div class="nav-actions"><span id="saveStatus" class="status"></span><button class="btn sync" id="syncBtn">Cloud sync</button><button class="btn primary" id="libraryBtn">My library <span id="count">0</span></button></div></nav>
+    <section class="hero">
+      <div><div class="eyebrow">Read less forgetfully</div><h1>Books in.<br/>Wisdom out.</h1><p class="sub">Search the Google Books catalog, keep the books that matter, rate them, and capture the one insight you actually want to remember. Recommendations adapt to what you keep.</p></div>
+      <div class="hero-card"><div class="eyebrow">The point of the product</div><div class="quote">“Not another shelf of books you once read — a shelf of ideas you still carry.”</div><div class="mini"><span>Google Books discovery</span><span>Your private insights</span></div></div>
+    </section>
+    <div class="search-wrap"><form id="searchForm" class="search"><input id="query" aria-label="Search books" placeholder="Search a title, author or topic — try ‘behavioral economics’" /><button class="btn primary">Search Google Books</button></form></div>
+    <div class="tabs"><button class="tab active" data-mode="discover">Discover</button><button class="tab" data-mode="recommended">For you</button><button class="tab" data-mode="saved">Saved</button></div>
+    <h2 class="section-title" id="sectionTitle">Discover books</h2><div class="section-sub" id="sectionSub">Live results from Google Books. Nothing is added until you choose it.</div>
+    <main id="grid" class="grid"></main>
+    <footer><span>Ink With Insights · live concept demo</span><span>Google Books supplies catalog metadata. Your notes stay yours.</span></footer>
+  </div>
+
+  <aside class="drawer" id="drawer"><div class="drawer-top"><h2 style="font-family:Georgia,serif;margin:0">My library</h2><button class="btn" id="closeDrawer">Close</button></div><p class="section-sub">Rate what you read and save the insight worth keeping.</p><div id="libraryList"></div></aside>
+
+  <div class="consent hidden" id="consent"><h3>Before this browser remembers your library</h3><p>This demo can store saved books, ratings and personal notes in this browser only. Nothing is uploaded or linked to an account unless you explicitly choose cloud sync later.</p><div class="consent-row"><button class="btn primary" id="allowLocal">Allow on-device saving</button><button class="btn" id="declineLocal" style="color:#201b16;border-color:#9f9180">Browse without saving</button></div></div>
+
+<script>
+const $=s=>document.querySelector(s); const grid=$('#grid'); const KEY='ink-with-insights-library-v2'; const CONSENT='ink-with-insights-consent-v1';
+let results=[], mode='discover', library=[];
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+const consent=localStorage.getItem(CONSENT);
+if(!consent) $('#consent').classList.remove('hidden');
+if(consent==='yes'){ try{library=JSON.parse(localStorage.getItem(KEY)||'[]')}catch{} }
+function persist(){ if(localStorage.getItem(CONSENT)!=='yes') return false; localStorage.setItem(KEY,JSON.stringify(library)); $('#saveStatus').textContent='Saved on this device'; setTimeout(()=>$('#saveStatus').textContent='',1200); return true}
+function normalize(v){const i=v.volumeInfo||{}; const isbn=(i.industryIdentifiers||[]).find(x=>x.type==='ISBN_13')?.identifier||(i.industryIdentifiers||[])[0]?.identifier||''; return {id:v.id,title:i.title||'Untitled',authors:i.authors||['Unknown author'],description:i.description||'',categories:i.categories||[],pageCount:i.pageCount||null,publishedDate:i.publishedDate||'',publisher:i.publisher||'',rating:i.averageRating||null,ratingsCount:i.ratingsCount||0,isbn,thumbnail:(i.imageLinks?.thumbnail||i.imageLinks?.smallThumbnail||'').replace('http://','https://'),previewLink:i.previewLink||'',infoLink:i.infoLink||'',userRating:0,insight:''}}
+function card(b){const saved=library.some(x=>x.id===b.id); return `<article class="book"><div class="cover">${b.thumbnail?`<img loading="lazy" src="${esc(b.thumbnail)}" alt="">`:`<div class="cover-fallback">${esc(b.title)}</div>`}</div><div class="book-body"><div class="title">${esc(b.title)}</div><div class="author">${esc(b.authors.join(', '))}</div><div class="meta">${esc(b.publishedDate?.slice(0,4)||'Year n/a')}${b.pageCount?' · '+b.pageCount+' pages':''}${b.rating?' · Google '+b.rating+'/5':''}</div><div class="chips">${b.categories.slice(0,2).map(c=>`<span class="chip">${esc(c)}</span>`).join('')}</div><div class="desc">${esc(b.description||'No publisher description available for this edition.')}</div><div class="book-actions"><button class="btn ${saved?'':'primary'}" data-save="${esc(b.id)}">${saved?'Saved':'Add to library'}</button>${b.previewLink?`<a class="btn" href="${esc(b.previewLink)}" target="_blank" rel="noreferrer" style="text-decoration:none;text-align:center">Preview</a>`:''}</div></div></article>`}
+function render(){let list=results; if(mode==='saved') list=library; if(mode==='recommended'){ const cats=[...new Set(library.flatMap(b=>b.categories))].slice(0,6); list=results.filter(b=>b.categories.some(c=>cats.some(x=>c.toLowerCase().includes(x.toLowerCase())))); if(!list.length) list=results.slice(0,8)}
+  grid.innerHTML=list.length?list.map(card).join(''):`<div class="empty">${mode==='saved'?'Your shelf is empty. Search for a book and save the ones worth remembering.':mode==='recommended'?'Save and rate a few books first — recommendations will use their topics and categories.':'Search Google Books to start exploring.'}</div>`; $('#count').textContent=library.length; renderLibrary();}
+function renderLibrary(){const el=$('#libraryList'); if(!library.length){el.innerHTML='<div class="empty" style="padding:28px">No saved books yet.</div>';return} el.innerHTML=library.map(b=>`<div class="library-item"><strong>${esc(b.title)}</strong><div class="author">${esc(b.authors.join(', '))}</div><div class="rating" data-rating="${esc(b.id)}">${[1,2,3,4,5].map(n=>`<span class="star ${n<=b.userRating?'on':''}" data-star="${n}">★</span>`).join('')} <span class="meta" style="margin-left:6px">${b.userRating?b.userRating+'/5':'Rate it'}</span></div><textarea data-note="${esc(b.id)}" placeholder="The insight I want to remember…">${esc(b.insight||'')}</textarea><div style="display:flex;gap:8px;margin-top:8px"><button class="btn" data-remove="${esc(b.id)}">Remove</button>${b.infoLink?`<a class="btn" href="${esc(b.infoLink)}" target="_blank" rel="noreferrer" style="text-decoration:none">Book info</a>`:''}</div></div>`).join('')}
+async function search(q){grid.innerHTML='<div class="empty">Searching Google Books…</div>'; try{const r=await fetch('https://www.googleapis.com/books/v1/volumes?q='+encodeURIComponent(q)+'&maxResults=24&printType=books'); if(!r.ok) throw Error('Search failed'); const d=await r.json(); results=(d.items||[]).map(normalize); mode='discover'; syncTabs(); render()}catch(e){grid.innerHTML='<div class="empty">Could not reach Google Books right now. Try again in a moment.</div>'}}
+function syncTabs(){document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.mode===mode)); const copy={discover:['Discover books','Live results from Google Books. Nothing is added until you choose it.'],recommended:['For you','Recommendations are based on categories from books you save.'],saved:['Saved shelf','Your personal reading memory, stored only where you consented.']}[mode]; $('#sectionTitle').textContent=copy[0];$('#sectionSub').textContent=copy[1]}
+$('#searchForm').addEventListener('submit',e=>{e.preventDefault(); const q=$('#query').value.trim(); if(q) search(q)});
+document.addEventListener('click',e=>{const save=e.target.closest('[data-save]'); if(save){if(localStorage.getItem(CONSENT)!=='yes'){ $('#consent').classList.remove('hidden'); return} const b=results.find(x=>x.id===save.dataset.save)||library.find(x=>x.id===save.dataset.save); if(b&&!library.some(x=>x.id===b.id)){library.unshift({...b});persist();render()} return}
+const rem=e.target.closest('[data-remove]'); if(rem){library=library.filter(x=>x.id!==rem.dataset.remove);persist();render();return}
+const star=e.target.closest('[data-star]'); if(star){const wrap=star.closest('[data-rating]');const b=library.find(x=>x.id===wrap.dataset.rating);if(b){b.userRating=+star.dataset.star;persist();renderLibrary()}return}
+const tab=e.target.closest('.tab'); if(tab){mode=tab.dataset.mode;syncTabs();render()}});
+document.addEventListener('input',e=>{if(e.target.matches('[data-note]')){const b=library.find(x=>x.id===e.target.dataset.note);if(b){b.insight=e.target.value;persist()}}});
+$('#libraryBtn').onclick=()=>{$('#drawer').classList.add('open');renderLibrary()}; $('#closeDrawer').onclick=()=>$('#drawer').classList.remove('open');
+$('#allowLocal').onclick=()=>{localStorage.setItem(CONSENT,'yes');$('#consent').classList.add('hidden');try{library=JSON.parse(localStorage.getItem(KEY)||'[]')}catch{} render()};
+$('#declineLocal').onclick=()=>{localStorage.setItem(CONSENT,'no');$('#consent').classList.add('hidden')};
+$('#syncBtn').onclick=()=>alert('Cloud sync is intentionally not enabled in this zero-secret demo. The production path is Firebase Authentication + Firestore, with sign-in shown only after explicit consent. Browsing Google Books never requires account access.');
+render(); search('subject:self-help');
+</script>
+</body></html>
